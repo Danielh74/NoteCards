@@ -1,0 +1,25 @@
+:root {
+  --cardColor: blue
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardsContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* .input {
+  width: '70%';
+  height: '25px';
+  border: '1px solid lightgray';
+  border-radius: '10px'
+} */

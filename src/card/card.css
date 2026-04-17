@@ -1,0 +1,63 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cardColor);
+    border: 1px solid black;
+    border-radius: 10px;
+    height: fit-content;
+    min-height: 250px;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.cardHeader {
+    font-weight: 600;
+    font-size: large;
+    align-self: flex-start;
+    padding: 5px;
+}
+
+.cardBody {
+    flex: 1;
+    display: flex;
+    padding: 5px;
+}
+
+.cardFooter {
+    background-color: rgba(240, 248, 255, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.colorOptionsBtn {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 16px;
+}
+
+.colorBtn {
+    border: 1px solid transparent;
+    border-radius: 100%;
+    width: 17px;
+    height: 17px;
+}
+
+.trashBtn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.pinBtn:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+.TextCardBody {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
