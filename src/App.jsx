@@ -70,19 +70,22 @@ function App() {
 
   return (
     <div className='container'>
-      <form
-        style={{ display: 'flex', justifyContent: 'center' }}
-        onSubmit={createCard}
-      >
-        <input
-          style={{ width: '50%', height: '25px', border: '2px solid lightgray', borderRadius: '10px' }}
-          name='cardTitle'
-          value={titleInput}
-          onChange={(e) => { setTitleInput(e.target.value) }}
-        />
-        <button type='button' onClick={() => setCardType('text')}>Text</button>
-        <button type='button' onClick={() => setCardType('list')}>List</button>
-      </form>
+      <div className='addCardFormContainer'>
+        <form
+          className='addCardForm'
+          onSubmit={createCard}
+        >
+          <input
+            className='cardTitleInput'
+            name='cardTitle'
+            value={titleInput}
+            onChange={(e) => { setTitleInput(e.target.value) }}
+          />
+          <button style={{ backgroundColor: cardType === 'text' && 'darkgray', borderRadius: 0 }} className='cardTypeBtn' type='button' onClick={() => setCardType('text')}>Text</button>
+          <button style={{ backgroundColor: cardType === 'list' && 'darkgray' }} className='cardTypeBtn' type='button' onClick={() => setCardType('list')}>List</button>
+        </form>
+      </div>
+
       <div className='cardsContainer'>
         {data.map(el => {
           return <Card

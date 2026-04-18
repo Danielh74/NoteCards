@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './card.css'
+import './buttons.css'
 import CardColorButton from '../components/CardColorButton';
 import { FaTrashCan } from "react-icons/fa6";
 import { MdPushPin } from "react-icons/md";

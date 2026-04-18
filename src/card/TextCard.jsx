@@ -14,14 +14,15 @@ function TextCard({ content: text }) {
             <article>
                 {content}
             </article>
-            <section style={{ alignSelf: 'center' }}>
+            <section>
                 <form onSubmit={handleSubmit}>
                     <input
+                        className='cardTextInput'
                         type='text'
                         name='textInput'
                         value={textInput}
                         onChange={(e) => setTextInput(e.target.value)} />
-                    <button>Add</button>
+                    <button className='addTextBtn'>+</button>
                 </form>
             </section>
         </main>

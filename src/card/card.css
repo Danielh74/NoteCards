@@ -1,57 +1,41 @@
 .cardContainer {
     display: flex;
     flex-direction: column;
-    background-color: var(--cardColor);
-    border: 1px solid black;
-    border-radius: 10px;
-    height: fit-content;
-    min-height: 250px;
-    min-width: 300px;
+    min-height: 260px;
+    max-width: 25%;
+    min-width: 250px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardContainer:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .cardHeader {
-    font-weight: 600;
-    font-size: large;
-    align-self: flex-start;
-    padding: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .cardBody {
     flex: 1;
     display: flex;
-    padding: 5px;
+    padding: 16px;
 }
 
 .cardFooter {
-    background-color: rgba(240, 248, 255, 0.8);
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    padding: 10px;
-}
-
-.colorOptionsBtn {
-    border-radius: 100%;
-    border: 1px solid black;
-    width: 16px;
-}
-
-.colorBtn {
-    border: 1px solid transparent;
-    border-radius: 100%;
-    width: 17px;
-    height: 17px;
-}
-
-.trashBtn:hover {
-    cursor: pointer;
-    color: red;
-}
-
-.pinBtn:hover {
-    cursor: pointer;
-    color: orange;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .TextCardBody {
@@ -59,5 +43,30 @@
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    gap: 12px;
+    line-height: 1.5;
+    word-break: break-word;
+}
 
+.cardTextInput {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* transparent */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px 0 0 10px;
+    font-size: 14px;
+    outline: none;
+    backdrop-filter: blur(4px);
+    /* nice glass effect (optional but clean) */
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.cardTextInput:focus {
+    border-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cardTextInput::placeholder {
+    color: rgba(0, 0, 0, 0.4);
 }

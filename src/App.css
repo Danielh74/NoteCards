@@ -1,25 +1,77 @@
-:root {
-  --cardColor: blue
-}
-
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .cardsContainer {
-  padding-top: 20px;
+  padding-top: 10px;
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-/* .input {
-  width: '70%';
-  height: '25px';
-  border: '1px solid lightgray';
-  border-radius: '10px'
-} */
+.addCardFormContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.addCardForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cardTitleInput {
+  flex: 1;
+  height: 48px;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.cardTitleInput::placeholder {
+  color: #9ca3af;
+}
+
+.cardTypeBtn {
+  height: 48px;
+  padding: 0 18px;
+  border: none;
+  border-left: 1px solid #e5e7eb;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.cardTypeBtn:hover {
+  background-color: #e5e7eb;
+}
+
+.cardTypeBtn:active {
+  transform: scale(0.98);
+}

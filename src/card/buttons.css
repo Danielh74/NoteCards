@@ -1,0 +1,64 @@
+.colorOptionsBtn {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.colorOptionsBtn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.colorBtn {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, border 0.15s ease;
+}
+
+.colorBtn:hover {
+    transform: scale(1.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.trashBtn,
+.pinBtn {
+    cursor: pointer;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.trashBtn:hover {
+    color: #ef4444;
+    /* softer red */
+    transform: scale(1.1);
+}
+
+.pinBtn:hover {
+    color: #f59e0b;
+    /* nicer orange */
+    transform: scale(1.1);
+}
+
+.addTextBtn {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 10px 10px 0;
+    font-weight: 700;
+    font-size: 16px;
+    width: 35px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.addTextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.addTextBtn:active {
+    transform: scale(0.95);
+}
