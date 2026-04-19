@@ -62,3 +62,16 @@
 .addTextBtn:active {
     transform: scale(0.95);
 }
+
+.removeItemBtn {
+    border: 0;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+}
+
+.removeItemBtn:hover {
+    scale: 1.3;
+    border: 1px solid red;
+    border-radius: 4px;
+}

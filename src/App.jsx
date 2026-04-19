@@ -81,8 +81,19 @@ function App() {
             value={titleInput}
             onChange={(e) => { setTitleInput(e.target.value) }}
           />
-          <button style={{ backgroundColor: cardType === 'text' && 'darkgray', borderRadius: 0 }} className='cardTypeBtn' type='button' onClick={() => setCardType('text')}>Text</button>
-          <button style={{ backgroundColor: cardType === 'list' && 'darkgray' }} className='cardTypeBtn' type='button' onClick={() => setCardType('list')}>List</button>
+          <button
+            style={{ borderRadius: 0 }}
+            className={`cardTypeBtn ${cardType === 'text' && 'activeCardTypeBtn'} `}
+            type='button'
+            onClick={() => setCardType('text')}>
+            Text
+          </button>
+          <button
+            className={`cardTypeBtn ${cardType === 'list' && 'activeCardTypeBtn'} `}
+            type='button'
+            onClick={() => setCardType('list')}>
+            List
+          </button>
         </form>
       </div>
 

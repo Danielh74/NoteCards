@@ -11,9 +11,11 @@ function TextCard({ content: text }) {
     }
     return (
         <main className='TextCardBody'>
-            <article>
-                {content}
-            </article>
+            {content.length === 0 ?
+                <p className='placeholderText'>Add text to the card</p> :
+                <article>
+                    {content}
+                </article>}
             <section>
                 <form onSubmit={handleSubmit}>
                     <input
