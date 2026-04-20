@@ -1,21 +1,18 @@
 import { useState } from 'react'
+import ContentInput from '../components/ContentInput';
 
 function ListCard({ content }) {
     const [items, setItems] = useState(content || []);
-    const [itemInput, setItemInput] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setItems([...items, { id: Date.now(), item: itemInput }]);
-        setItemInput('');
+    const handleSubmit = (input) => {
+        setItems([...items, { id: Date.now(), item: input }]);
     }
 
     const deleteItem = (id) => {
         setItems(prev => prev.filter(item => item.id !== id));
     }
     return (
-        <main className='TextCardBody'>
+        <main className='cardContent'>
             {items.length === 0 ?
                 <p className='placeholderText'>Add items to the list</p> :
                 <ul>
@@ -25,20 +22,10 @@ function ListCard({ content }) {
                             <button className='removeItemBtn' onClick={() => deleteItem(item.id)}>X</button>
                         </div>
                     )}
-                </ul>}
+                </ul>
+            }
 
-            <section>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        className='cardTextInput'
-                        type='text'
-                        name='utemInput'
-                        value={itemInput}
-                        onChange={(e) => setItemInput(e.target.value)}
-                    />
-                    <button className='addTextBtn'>+</button>
-                </form>
-            </section>
+            <ContentInput submitInput={handleSubmit} />
         </main>
     )
 }

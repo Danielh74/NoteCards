@@ -6,6 +6,7 @@ import { FaTrashCan } from "react-icons/fa6";
 import { MdPushPin } from "react-icons/md";
 import TextCard from './TextCard';
 import ListCard from './ListCard';
+import ImageCard from './ImageCard';
 
 const Card = ({ id, title, pinned, deleteFn, pinFn, content, type }) => {
     const [bgColor, setBgColor] = useState('white');
@@ -24,6 +25,7 @@ const Card = ({ id, title, pinned, deleteFn, pinFn, content, type }) => {
             <main className='cardBody'>
                 {type === 'text' && <TextCard content={content} />}
                 {type === 'list' && <ListCard content={content} />}
+                {type === 'image' && <ImageCard />}
             </main>
             <footer className='cardFooter'>
                 {colorOptions ?

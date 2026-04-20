@@ -3,6 +3,7 @@ import './App.css'
 import Card from './card/Card'
 import TextCard from './card/TextCard';
 import ListCard from './card/ListCard';
+import { IoText, IoList, IoImage } from "react-icons/io5";
 
 const db = [
   {
@@ -31,7 +32,13 @@ const db = [
     type: 'text',
     pinned: false
   },
-]
+];
+
+const contentTypes = {
+  text: '',
+  list: [],
+  image: ''
+};
 
 function App() {
   const [data, setData] = useState(db);
@@ -44,7 +51,7 @@ function App() {
     const newCard = {
       id: Date.now(),
       title: titleInput,
-      content: cardType === 'text' ? '' : [],
+      content: contentTypes[cardType],
       pinned: false,
       type: cardType
     };
@@ -86,13 +93,19 @@ function App() {
             className={`cardTypeBtn ${cardType === 'text' && 'activeCardTypeBtn'} `}
             type='button'
             onClick={() => setCardType('text')}>
-            Text
+            <IoText className='cardTypeIcon' />
           </button>
           <button
             className={`cardTypeBtn ${cardType === 'list' && 'activeCardTypeBtn'} `}
             type='button'
             onClick={() => setCardType('list')}>
-            List
+            <IoList className='cardTypeIcon' />
+          </button>
+          <button
+            className={`cardTypeBtn ${cardType === 'image' && 'activeCardTypeBtn'} `}
+            type='button'
+            onClick={() => setCardType('image')}>
+            <IoImage className='cardTypeIcon' />
           </button>
         </form>
       </div>

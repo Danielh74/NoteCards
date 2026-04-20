@@ -80,3 +80,7 @@ form {
 .cardTypeBtn:active {
   transform: scale(0.98);
 }
+
+.cardTypeIcon {
+  font-size: x-large;
+}
